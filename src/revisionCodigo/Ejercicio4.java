@@ -13,10 +13,10 @@ public class Ejercicio4 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in); //Se corrigió la inicialización del Scanner
     
-        System.out.print("Turno del jugador 1 (introduzca piedra, papel o tijeras): ");
+        System.out.println("Turno del jugador 1 (introduzca piedra, papel o tijeras): ");
         String j1 = s.nextLine().toLowerCase(); // Se lee la jugada del J1 y se convierte a minúsculas
-    
-        System.out.print("Turno del jugador 2 (introduzca piedra, papel o tijeras): "); // Se corrigió el mensaje para el J2
+        System.out.println();
+        System.out.println("Turno del jugador 2 (introduzca piedra, papel o tijeras): "); // Se corrigió el mensaje para el J2
         String j2 = s.nextLine().toLowerCase();
     
         // Se valida que la entrada sea correcta 
@@ -28,7 +28,8 @@ public class Ejercicio4 {
     
         // Comparativa
         if (j1.equals(j2)) {
-            System.out.println("Empate");
+            System.out.println();
+        	System.out.println("Empate");
         } else {
             int g = 2; // Asignamos g por defecto
             
@@ -49,6 +50,7 @@ public class Ejercicio4 {
                     }
                     break; // Se añadió break
             }
+            System.out.println();
             System.out.println("Gana el jugador " + g);
         }
         s.close();
